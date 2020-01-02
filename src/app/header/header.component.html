@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+  <button mat-button routerLink="home">Home</button>
+  <span class="fill-remaining-space"></span>
+  <span>Joshua K. Pearson</span>
+  <span class="fill-remaining-space"></span>
+  <button mat-button routerLink="about">About</button>
+  <button mat-button routerLink="portfolio">Portfolio</button>
+  <button mat-button routerLink="contact">Contact</button>
+  <button mat-button *ngIf="!checkUser()" routerLink="login">
+    <mat-icon>fingerprint</mat-icon>
+  </button>
+  <button mat-button (click)="signOut()" *ngIf="checkUser()">Sign Out</button>
+</mat-toolbar>
