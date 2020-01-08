@@ -6,13 +6,13 @@ This is a total rebuilding of my websire [joshuakpearson.com](https://joshuakpea
 
 Firebase is an excellent resource for both authentication and document storage (who'd a thunk it). As such, I decided that all 'cards' that are displayed will be a single json object arranged as such:
 
-export interface Card {
+```export interface Card {
   page: string;
   header: { title: string; subtitle: string };
   img?: string;
   content: string;
   actions?: string;
-}
+}```
 
 This allows me to build each page using data from the database, and add or remove it from the page itself without touching code. 
 
