@@ -6,7 +6,8 @@ This is a total rebuilding of my websire [joshuakpearson.com](https://joshuakpea
 
 Firebase is an excellent resource for both authentication and document storage (who'd a thunk it). As such, I decided that all 'cards' that are displayed will be a single json object arranged as such:
 
-```export interface Card {
+```
+export interface Card {
   page: string;
   header: { title: string; subtitle: string };
   img?: string;
