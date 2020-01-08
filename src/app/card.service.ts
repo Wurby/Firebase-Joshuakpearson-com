@@ -7,8 +7,8 @@ import { Injectable } from '@angular/core';
 export class CardService {
   constructor() {}
 
-  createCard(card: Card) {}
-  editCard(card: Card) {}
-  getCards() {}
-  deleteCard(card: Card) {}
+  createCard(card: Card, collection) {}
+  editCard(card: Card, collection) {}
+  getCards(collection) {}
+  deleteCard(card: Card, collection) {}
 }
