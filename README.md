@@ -12,7 +12,8 @@ Firebase is an excellent resource for both authentication and document storage (
   img?: string;
   content: string;
   actions?: string;
-}```
+}
+```
 
 This allows me to build each page using data from the database, and add or remove it from the page itself without touching code. 
 
