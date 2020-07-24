@@ -11,7 +11,7 @@ export class LoginService {
   authenticate(user: { email: string; password: string }) {
     return this.fbauth.auth
       .signInWithEmailAndPassword(user.email, user.password)
-      .then(success => {
+      .then((success) => {
         console.log(`signed ${success.user.email} in.`);
         localStorage.setItem('user', `${success.user.email}`);
       });
@@ -23,18 +23,12 @@ export class LoginService {
   }
 
   isLoggedIn() {
-    if (localStorage.getItem('user')) {
-      return true;
-    } else {
-      return false;
-    }
+    return localStorage.getItem('user') ? true : false;
   }
 
   getUser() {
-    if (this.fbauth.auth.currentUser) {
-      return this.fbauth.auth.currentUser;
-    } else {
-      return 'User is not signed in.';
-    }
+    return this.fbauth.auth.currentUser
+      ? this.fbauth.auth.currentUser
+      : 'User is not signed in.';
   }
 }
